@@ -9,7 +9,7 @@ contract Scorecard{
     //           address
     address public classTeacher;
 
-    constructor() {
+    constructor() public {
         classTeacher = msg.sender;
     }
 

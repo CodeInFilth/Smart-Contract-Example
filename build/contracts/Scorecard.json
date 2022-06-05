@@ -1,0 +1,4372 @@
+{
+  "contractName": "Scorecard",
+  "abi": [
+    {
+      "inputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "constructor"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": false,
+          "internalType": "string",
+          "name": "_studentFirstName",
+          "type": "string"
+        },
+        {
+          "indexed": false,
+          "internalType": "string",
+          "name": "_studentLastName",
+          "type": "string"
+        },
+        {
+          "indexed": false,
+          "internalType": "uint256",
+          "name": "_studentId",
+          "type": "uint256"
+        }
+      ],
+      "name": "studentAdded",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": false,
+          "internalType": "uint256",
+          "name": "_studentId",
+          "type": "uint256"
+        },
+        {
+          "indexed": false,
+          "internalType": "uint256",
+          "name": "_englishMarks",
+          "type": "uint256"
+        },
+        {
+          "indexed": false,
+          "internalType": "uint256",
+          "name": "_mathMarks",
+          "type": "uint256"
+        },
+        {
+          "indexed": false,
+          "internalType": "uint256",
+          "name": "_scienceMarks",
+          "type": "uint256"
+        }
+      ],
+      "name": "studentScoresRecorded",
+      "type": "event"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "classTeacher",
+      "outputs": [
+        {
+          "internalType": "address",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "internalType": "string",
+          "name": "_studentFirstName",
+          "type": "string"
+        },
+        {
+          "internalType": "string",
+          "name": "_studentLastName",
+          "type": "string"
+        }
+      ],
+      "name": "addStudentDetails",
+      "outputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "_studentId",
+          "type": "uint256"
+        },
+        {
+          "internalType": "uint256",
+          "name": "_englishMarks",
+          "type": "uint256"
+        },
+        {
+          "internalType": "uint256",
+          "name": "_mathMarks",
+          "type": "uint256"
+        },
+        {
+          "internalType": "uint256",
+          "name": "_scienceMarks",
+          "type": "uint256"
+        }
+      ],
+      "name": "addStudentScores",
+      "outputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    }
+  ],
+  "metadata": "{\"compiler\":{\"version\":\"0.5.16+commit.9c3226ce\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"constructor\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":false,\"internalType\":\"string\",\"name\":\"_studentFirstName\",\"type\":\"string\"},{\"indexed\":false,\"internalType\":\"string\",\"name\":\"_studentLastName\",\"type\":\"string\"},{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"_studentId\",\"type\":\"uint256\"}],\"name\":\"studentAdded\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"_studentId\",\"type\":\"uint256\"},{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"_englishMarks\",\"type\":\"uint256\"},{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"_mathMarks\",\"type\":\"uint256\"},{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"_scienceMarks\",\"type\":\"uint256\"}],\"name\":\"studentScoresRecorded\",\"type\":\"event\"},{\"constant\":false,\"inputs\":[{\"internalType\":\"string\",\"name\":\"_studentFirstName\",\"type\":\"string\"},{\"internalType\":\"string\",\"name\":\"_studentLastName\",\"type\":\"string\"}],\"name\":\"addStudentDetails\",\"outputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"constant\":false,\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"_studentId\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"_englishMarks\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"_mathMarks\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"_scienceMarks\",\"type\":\"uint256\"}],\"name\":\"addStudentScores\",\"outputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[],\"name\":\"classTeacher\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"}],\"devdoc\":{\"methods\":{}},\"userdoc\":{\"methods\":{}}},\"settings\":{\"compilationTarget\":{\"project:/contracts/Scorecard.sol\":\"Scorecard\"},\"evmVersion\":\"istanbul\",\"libraries\":{},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"project:/contracts/Scorecard.sol\":{\"keccak256\":\"0x94dbac55b2e3a2a31af9e0b0531ded7caf98f8e983907485da8302ad1a3fff2e\",\"urls\":[\"bzz-raw://69830698b100e504b838cb83f180b23c25331b87ece4479c6dc5f654269a7926\",\"dweb:/ipfs/Qme4SiYP3bfJ2xRSk7PrZgt6cCi9kP6ZyYt6wjYo1RdpkM\"]}},\"version\":1}",
+  "bytecode": "0x60806040526000805534801561001457600080fd5b5033600160006101000a81548173ffffffffffffffffffffffffffffffffffffffff021916908373ffffffffffffffffffffffffffffffffffffffff1602179055506106bf806100656000396000f3fe608060405234801561001057600080fd5b50600436106100415760003560e01c80634c94ebbb14610046578063a24232c514610092578063be645d0a146101e4575b600080fd5b6100906004803603608081101561005c57600080fd5b810190808035906020019092919080359060200190929190803590602001909291908035906020019092919050505061022e565b005b6101e2600480360360408110156100a857600080fd5b81019080803590602001906401000000008111156100c557600080fd5b8201836020820111156100d757600080fd5b803590602001918460018302840111640100000000831117156100f957600080fd5b91908080601f016020809104026020016040519081016040528093929190818152602001838380828437600081840152601f19601f8201169050808301925050505050505091929192908035906020019064010000000081111561015c57600080fd5b82018360208201111561016e57600080fd5b8035906020019184600183028401116401000000008311171561019057600080fd5b91908080601f016020809104026020016040519081016040528093929190818152602001838380828437600081840152601f19601f820116905080830192505050505050509192919290505050610367565b005b6101ec61058d565b604051808273ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200191505060405180910390f35b338073ffffffffffffffffffffffffffffffffffffffff16600160009054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16146102d5576040517f08c379a00000000000000000000000000000000000000000000000000000000081526004018080602001828103825260328152602001806106596032913960400191505060405180910390fd5b60006003600087815260200190815260200160002090508481600101819055508381600201819055508281600301819055508581600001819055507ff37378b436df9c133c295a383bc635d84430a23d7801ffa2dbfd18f9e191156a868686866040518085815260200184815260200183815260200182815260200194505050505060405180910390a1505050505050565b338073ffffffffffffffffffffffffffffffffffffffff16600160009054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff161461040e576040517f08c379a00000000000000000000000000000000000000000000000000000000081526004018080602001828103825260328152602001806106596032913960400191505060405180910390fd5b6000600260008054815260200190815260200160002090508381600001908051906020019061043e9291906105b3565b50828160010190805190602001906104579291906105b3565b5060005481600201819055507faee3b08f60bd17d98cf5318d54d8104d3f63cd7878cb5ee81a3ab7d3c8ef1d3d8484600054604051808060200180602001848152602001838103835286818151815260200191508051906020019080838360005b838110156104d35780820151818401526020810190506104b8565b50505050905090810190601f1680156105005780820380516001836020036101000a031916815260200191505b50838103825285818151815260200191508051906020019080838360005b8381101561053957808201518184015260208101905061051e565b50505050905090810190601f1680156105665780820380516001836020036101000a031916815260200191505b509550505050505060405180910390a1600080815480929190600101919050555050505050565b600160009054906101000a900473ffffffffffffffffffffffffffffffffffffffff1681565b828054600181600116156101000203166002900490600052602060002090601f016020900481019282601f106105f457805160ff1916838001178555610622565b82800160010185558215610622579182015b82811115610621578251825591602001919060010190610606565b5b50905061062f9190610633565b5090565b61065591905b80821115610651576000816000905550600101610639565b5090565b9056fe4f6e6c792074686520636c6173732074656163686572206861732061636365737320746f20746869732066756e6374696f6ea265627a7a7231582047cf9c61bf3dbe5960c1e9db4b8ba61c8989c519bffc5c57d535f07dd1c19dce64736f6c63430005100032",
+  "deployedBytecode": "0x608060405234801561001057600080fd5b50600436106100415760003560e01c80634c94ebbb14610046578063a24232c514610092578063be645d0a146101e4575b600080fd5b6100906004803603608081101561005c57600080fd5b810190808035906020019092919080359060200190929190803590602001909291908035906020019092919050505061022e565b005b6101e2600480360360408110156100a857600080fd5b81019080803590602001906401000000008111156100c557600080fd5b8201836020820111156100d757600080fd5b803590602001918460018302840111640100000000831117156100f957600080fd5b91908080601f016020809104026020016040519081016040528093929190818152602001838380828437600081840152601f19601f8201169050808301925050505050505091929192908035906020019064010000000081111561015c57600080fd5b82018360208201111561016e57600080fd5b8035906020019184600183028401116401000000008311171561019057600080fd5b91908080601f016020809104026020016040519081016040528093929190818152602001838380828437600081840152601f19601f820116905080830192505050505050509192919290505050610367565b005b6101ec61058d565b604051808273ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200191505060405180910390f35b338073ffffffffffffffffffffffffffffffffffffffff16600160009054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16146102d5576040517f08c379a00000000000000000000000000000000000000000000000000000000081526004018080602001828103825260328152602001806106596032913960400191505060405180910390fd5b60006003600087815260200190815260200160002090508481600101819055508381600201819055508281600301819055508581600001819055507ff37378b436df9c133c295a383bc635d84430a23d7801ffa2dbfd18f9e191156a868686866040518085815260200184815260200183815260200182815260200194505050505060405180910390a1505050505050565b338073ffffffffffffffffffffffffffffffffffffffff16600160009054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff161461040e576040517f08c379a00000000000000000000000000000000000000000000000000000000081526004018080602001828103825260328152602001806106596032913960400191505060405180910390fd5b6000600260008054815260200190815260200160002090508381600001908051906020019061043e9291906105b3565b50828160010190805190602001906104579291906105b3565b5060005481600201819055507faee3b08f60bd17d98cf5318d54d8104d3f63cd7878cb5ee81a3ab7d3c8ef1d3d8484600054604051808060200180602001848152602001838103835286818151815260200191508051906020019080838360005b838110156104d35780820151818401526020810190506104b8565b50505050905090810190601f1680156105005780820380516001836020036101000a031916815260200191505b50838103825285818151815260200191508051906020019080838360005b8381101561053957808201518184015260208101905061051e565b50505050905090810190601f1680156105665780820380516001836020036101000a031916815260200191505b509550505050505060405180910390a1600080815480929190600101919050555050505050565b600160009054906101000a900473ffffffffffffffffffffffffffffffffffffffff1681565b828054600181600116156101000203166002900490600052602060002090601f016020900481019282601f106105f457805160ff1916838001178555610622565b82800160010185558215610622579182015b82811115610621578251825591602001919060010190610606565b5b50905061062f9190610633565b5090565b61065591905b80821115610651576000816000905550600101610639565b5090565b9056fe4f6e6c792074686520636c6173732074656163686572206861732061636365737320746f20746869732066756e6374696f6ea265627a7a7231582047cf9c61bf3dbe5960c1e9db4b8ba61c8989c519bffc5c57d535f07dd1c19dce64736f6c63430005100032",
+  "sourceMap": "70:2135:1:-;;;141:1;118:24;;212:63;8:9:-1;5:2;;;30:1;27;20:12;5:2;212:63:1;258:10;243:12;;:25;;;;;;;;;;;;;;;;;;70:2135;;;;;;",
+  "deployedSourceMap": "70:2135:1:-;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;70:2135:1;;;;;;;;;;;;;;;;;;;;;;;;;;;;;1606:597;;;;;;13:3:-1;8;5:12;2:2;;;30:1;27;20:12;2:2;1606:597:1;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::i;:::-;;1015:585;;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;1015:585:1;;;;;;;;;;21:11:-1;8;5:28;2:2;;;46:1;43;36:12;2:2;1015:585:1;;35:9:-1;28:4;12:14;8:25;5:40;2:2;;;58:1;55;48:12;2:2;1015:585:1;;;;;;100:9:-1;95:1;81:12;77:20;67:8;63:35;60:50;39:11;25:12;22:29;11:107;8:2;;;131:1;128;121:12;8:2;1015:585:1;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;30:3:-1;22:6;14;1:33;99:1;93:3;85:6;81:16;74:27;137:4;133:9;126:4;121:3;117:14;113:30;106:37;;169:3;161:6;157:16;147:26;;1015:585:1;;;;;;;;;;;;;;;;;21:11:-1;8;5:28;2:2;;;46:1;43;36:12;2:2;1015:585:1;;35:9:-1;28:4;12:14;8:25;5:40;2:2;;;58:1;55;48:12;2:2;1015:585:1;;;;;;100:9:-1;95:1;81:12;77:20;67:8;63:35;60:50;39:11;25:12;22:29;11:107;8:2;;;131:1;128;121:12;8:2;1015:585:1;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;30:3:-1;22:6;14;1:33;99:1;93:3;85:6;81:16;74:27;137:4;133:9;126:4;121:3;117:14;113:30;106:37;;169:3;161:6;157:16;147:26;;1015:585:1;;;;;;;;;;;;;;;:::i;:::-;;178:27;;;:::i;:::-;;;;;;;;;;;;;;;;;;;;;;;1606:597;1839:10;364:13;348:29;;:12;;;;;;;;;;;:29;;;340:92;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;1862:25;1890:6;:18;1897:10;1890:18;;;;;;;;;;;1862:46;;1946:13;1919:11;:24;;:40;;;;1993:10;1969:11;:21;;:34;;;;2040:13;2013:11;:24;;:40;;;;2087:10;2063:11;:21;;:34;;;;2121:75;2143:10;2155:13;2170:10;2182:13;2121:75;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;442:1;1606:597;;;;;:::o;1015:585::-;1163:10;364:13;348:29;;:12;;;;;;;;;;;:29;;;340:92;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;1184:33;1220:8;:22;1229:12;;1220:22;;;;;;;;;;;1184:58;;1282:17;1252:10;:27;;:47;;;;;;;;;;;;:::i;:::-;;1338:16;1309:10;:26;;:45;;;;;;;;;;;;:::i;:::-;;1380:12;;1364:10;:13;;:28;;;;1505:63;1518:17;1537:16;1555:12;;1505:63;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;23:1:-1;8:100;33:3;30:1;27:10;8:100;;;99:1;94:3;90:11;84:18;80:1;75:3;71:11;64:39;52:2;49:1;45:10;40:15;;8:100;;;12:14;1505:63:1;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;23:1:-1;8:100;33:3;30:1;27:10;8:100;;;99:1;94:3;90:11;84:18;80:1;75:3;71:11;64:39;52:2;49:1;45:10;40:15;;8:100;;;12:14;1505:63:1;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;1579:12;;:14;;;;;;;;;;;;;442:1;1015:585;;;:::o;178:27::-;;;;;;;;;;;;;:::o;70:2135::-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::i;:::-;;;:::o;:::-;;;;;;;;;;;;;;;;;;;;;;;;;;;:::o",
+  "source": "// SPDX-License-Identifier: GPL-3.0\n\npragma solidity >=0.4.0 <0.9.0;\n\ncontract Scorecard{\n    //             vars\n    uint256 studentCount = 0;\n    \n    //           address\n    address public classTeacher;\n\n    constructor() public {\n        classTeacher = msg.sender;\n    }\n\n    modifier onlyClassTeacher(address _classTeacher) {\n        require(classTeacher == _classTeacher, \"Only the class teacher has access to this function\");\n        _;  \n    }\n\n    struct StudentDetails{\n        string studentFirstName;\n        string studentLastName;\n        uint256 id;\n    }\n\n    struct Score{\n        uint256 studentId;\n        uint256 englishMarks;\n        uint256 mathMarks;\n        uint256 scienceMarks;\n    }\n\n    mapping(uint => StudentDetails) students;\n\n    mapping(uint => Score) scores;\n\n    event studentAdded(string _studentFirstName, string _studentLastName, uint256 _studentId);\n\n    event studentScoresRecorded(uint256 _studentId, uint256 _englishMarks, uint256 _mathMarks, uint256 _scienceMarks);\n\n    function addStudentDetails(string memory _studentFirstName,\n                                string memory _studentLastName) public onlyClassTeacher(msg.sender){\n        StudentDetails storage studentObj = students[studentCount];\n        studentObj.studentFirstName = _studentFirstName;\n        studentObj.studentLastName = _studentLastName;\n        studentObj.id = studentCount;\n// One\n//        emit studentAdded(_studentFirstName, _studentLastName, msg.value, StudentCount) \n        emit studentAdded(_studentFirstName, _studentLastName, studentCount);\n\n        studentCount++;\n    }\n\n    function addStudentScores( uint256 _studentId,\n                                uint256 _englishMarks,\n                                uint256 _mathMarks,\n                                uint256 _scienceMarks) public onlyClassTeacher(msg.sender) {\n\n        Score storage scoreObject = scores[_studentId];\n\n        scoreObject.englishMarks = _englishMarks;\n        scoreObject.mathMarks = _mathMarks;\n        scoreObject.scienceMarks = _scienceMarks;\n        scoreObject.studentId = _studentId;\n        \n        emit studentScoresRecorded(_studentId, _englishMarks, _mathMarks, _scienceMarks);\n    }\n}",
+  "sourcePath": "/Users/austinalders/Documents/GitHub/Personal_Organized/truffleProj/contracts/Scorecard.sol",
+  "ast": {
+    "absolutePath": "project:/contracts/Scorecard.sol",
+    "exportedSymbols": {
+      "Scorecard": [
+        202
+      ]
+    },
+    "id": 203,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 34,
+        "literals": [
+          "solidity",
+          ">=",
+          "0.4",
+          ".0",
+          "<",
+          "0.9",
+          ".0"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "37:31:1"
+      },
+      {
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "documentation": null,
+        "fullyImplemented": true,
+        "id": 202,
+        "linearizedBaseContracts": [
+          202
+        ],
+        "name": "Scorecard",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "constant": false,
+            "id": 37,
+            "name": "studentCount",
+            "nodeType": "VariableDeclaration",
+            "scope": 202,
+            "src": "118:24:1",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_uint256",
+              "typeString": "uint256"
+            },
+            "typeName": {
+              "id": 35,
+              "name": "uint256",
+              "nodeType": "ElementaryTypeName",
+              "src": "118:7:1",
+              "typeDescriptions": {
+                "typeIdentifier": "t_uint256",
+                "typeString": "uint256"
+              }
+            },
+            "value": {
+              "argumentTypes": null,
+              "hexValue": "30",
+              "id": 36,
+              "isConstant": false,
+              "isLValue": false,
+              "isPure": true,
+              "kind": "number",
+              "lValueRequested": false,
+              "nodeType": "Literal",
+              "src": "141:1:1",
+              "subdenomination": null,
+              "typeDescriptions": {
+                "typeIdentifier": "t_rational_0_by_1",
+                "typeString": "int_const 0"
+              },
+              "value": "0"
+            },
+            "visibility": "internal"
+          },
+          {
+            "constant": false,
+            "id": 39,
+            "name": "classTeacher",
+            "nodeType": "VariableDeclaration",
+            "scope": 202,
+            "src": "178:27:1",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_address",
+              "typeString": "address"
+            },
+            "typeName": {
+              "id": 38,
+              "name": "address",
+              "nodeType": "ElementaryTypeName",
+              "src": "178:7:1",
+              "stateMutability": "nonpayable",
+              "typeDescriptions": {
+                "typeIdentifier": "t_address",
+                "typeString": "address"
+              }
+            },
+            "value": null,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 47,
+              "nodeType": "Block",
+              "src": "233:42:1",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 45,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "id": 42,
+                      "name": "classTeacher",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 39,
+                      "src": "243:12:1",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_address",
+                        "typeString": "address"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "argumentTypes": null,
+                      "expression": {
+                        "argumentTypes": null,
+                        "id": 43,
+                        "name": "msg",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 217,
+                        "src": "258:3:1",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_magic_message",
+                          "typeString": "msg"
+                        }
+                      },
+                      "id": 44,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "memberName": "sender",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": null,
+                      "src": "258:10:1",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_address_payable",
+                        "typeString": "address payable"
+                      }
+                    },
+                    "src": "243:25:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "id": 46,
+                  "nodeType": "ExpressionStatement",
+                  "src": "243:25:1"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 48,
+            "implemented": true,
+            "kind": "constructor",
+            "modifiers": [],
+            "name": "",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 40,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "223:2:1"
+            },
+            "returnParameters": {
+              "id": 41,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "233:0:1"
+            },
+            "scope": 202,
+            "src": "212:63:1",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 60,
+              "nodeType": "Block",
+              "src": "330:122:1",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "commonType": {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        },
+                        "id": 55,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": false,
+                        "lValueRequested": false,
+                        "leftExpression": {
+                          "argumentTypes": null,
+                          "id": 53,
+                          "name": "classTeacher",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 39,
+                          "src": "348:12:1",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_address",
+                            "typeString": "address"
+                          }
+                        },
+                        "nodeType": "BinaryOperation",
+                        "operator": "==",
+                        "rightExpression": {
+                          "argumentTypes": null,
+                          "id": 54,
+                          "name": "_classTeacher",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 50,
+                          "src": "364:13:1",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_address",
+                            "typeString": "address"
+                          }
+                        },
+                        "src": "348:29:1",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_bool",
+                          "typeString": "bool"
+                        }
+                      },
+                      {
+                        "argumentTypes": null,
+                        "hexValue": "4f6e6c792074686520636c6173732074656163686572206861732061636365737320746f20746869732066756e6374696f6e",
+                        "id": 56,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": true,
+                        "kind": "string",
+                        "lValueRequested": false,
+                        "nodeType": "Literal",
+                        "src": "379:52:1",
+                        "subdenomination": null,
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_stringliteral_f8e1d624b34f126c06ebb3b35efadd3a86e23943e7ce91fcea2aa1032f0cde09",
+                          "typeString": "literal_string \"Only the class teacher has access to this function\""
+                        },
+                        "value": "Only the class teacher has access to this function"
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_bool",
+                          "typeString": "bool"
+                        },
+                        {
+                          "typeIdentifier": "t_stringliteral_f8e1d624b34f126c06ebb3b35efadd3a86e23943e7ce91fcea2aa1032f0cde09",
+                          "typeString": "literal_string \"Only the class teacher has access to this function\""
+                        }
+                      ],
+                      "id": 52,
+                      "name": "require",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [
+                        220,
+                        221
+                      ],
+                      "referencedDeclaration": 221,
+                      "src": "340:7:1",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_require_pure$_t_bool_$_t_string_memory_ptr_$returns$__$",
+                        "typeString": "function (bool,string memory) pure"
+                      }
+                    },
+                    "id": 57,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "340:92:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$__$",
+                      "typeString": "tuple()"
+                    }
+                  },
+                  "id": 58,
+                  "nodeType": "ExpressionStatement",
+                  "src": "340:92:1"
+                },
+                {
+                  "id": 59,
+                  "nodeType": "PlaceholderStatement",
+                  "src": "442:1:1"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 61,
+            "name": "onlyClassTeacher",
+            "nodeType": "ModifierDefinition",
+            "parameters": {
+              "id": 51,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 50,
+                  "name": "_classTeacher",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 61,
+                  "src": "307:21:1",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 49,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "307:7:1",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "306:23:1"
+            },
+            "src": "281:171:1",
+            "visibility": "internal"
+          },
+          {
+            "canonicalName": "Scorecard.StudentDetails",
+            "id": 68,
+            "members": [
+              {
+                "constant": false,
+                "id": 63,
+                "name": "studentFirstName",
+                "nodeType": "VariableDeclaration",
+                "scope": 68,
+                "src": "489:23:1",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_string_storage_ptr",
+                  "typeString": "string"
+                },
+                "typeName": {
+                  "id": 62,
+                  "name": "string",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "489:6:1",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_storage_ptr",
+                    "typeString": "string"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 65,
+                "name": "studentLastName",
+                "nodeType": "VariableDeclaration",
+                "scope": 68,
+                "src": "522:22:1",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_string_storage_ptr",
+                  "typeString": "string"
+                },
+                "typeName": {
+                  "id": 64,
+                  "name": "string",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "522:6:1",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_storage_ptr",
+                    "typeString": "string"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 67,
+                "name": "id",
+                "nodeType": "VariableDeclaration",
+                "scope": 68,
+                "src": "554:10:1",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                },
+                "typeName": {
+                  "id": 66,
+                  "name": "uint256",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "554:7:1",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              }
+            ],
+            "name": "StudentDetails",
+            "nodeType": "StructDefinition",
+            "scope": 202,
+            "src": "458:113:1",
+            "visibility": "public"
+          },
+          {
+            "canonicalName": "Scorecard.Score",
+            "id": 77,
+            "members": [
+              {
+                "constant": false,
+                "id": 70,
+                "name": "studentId",
+                "nodeType": "VariableDeclaration",
+                "scope": 77,
+                "src": "599:17:1",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                },
+                "typeName": {
+                  "id": 69,
+                  "name": "uint256",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "599:7:1",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 72,
+                "name": "englishMarks",
+                "nodeType": "VariableDeclaration",
+                "scope": 77,
+                "src": "626:20:1",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                },
+                "typeName": {
+                  "id": 71,
+                  "name": "uint256",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "626:7:1",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 74,
+                "name": "mathMarks",
+                "nodeType": "VariableDeclaration",
+                "scope": 77,
+                "src": "656:17:1",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                },
+                "typeName": {
+                  "id": 73,
+                  "name": "uint256",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "656:7:1",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 76,
+                "name": "scienceMarks",
+                "nodeType": "VariableDeclaration",
+                "scope": 77,
+                "src": "683:20:1",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                },
+                "typeName": {
+                  "id": 75,
+                  "name": "uint256",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "683:7:1",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              }
+            ],
+            "name": "Score",
+            "nodeType": "StructDefinition",
+            "scope": 202,
+            "src": "577:133:1",
+            "visibility": "public"
+          },
+          {
+            "constant": false,
+            "id": 81,
+            "name": "students",
+            "nodeType": "VariableDeclaration",
+            "scope": 202,
+            "src": "716:40:1",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_mapping$_t_uint256_$_t_struct$_StudentDetails_$68_storage_$",
+              "typeString": "mapping(uint256 => struct Scorecard.StudentDetails)"
+            },
+            "typeName": {
+              "id": 80,
+              "keyType": {
+                "id": 78,
+                "name": "uint",
+                "nodeType": "ElementaryTypeName",
+                "src": "724:4:1",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                }
+              },
+              "nodeType": "Mapping",
+              "src": "716:31:1",
+              "typeDescriptions": {
+                "typeIdentifier": "t_mapping$_t_uint256_$_t_struct$_StudentDetails_$68_storage_$",
+                "typeString": "mapping(uint256 => struct Scorecard.StudentDetails)"
+              },
+              "valueType": {
+                "contractScope": null,
+                "id": 79,
+                "name": "StudentDetails",
+                "nodeType": "UserDefinedTypeName",
+                "referencedDeclaration": 68,
+                "src": "732:14:1",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_struct$_StudentDetails_$68_storage_ptr",
+                  "typeString": "struct Scorecard.StudentDetails"
+                }
+              }
+            },
+            "value": null,
+            "visibility": "internal"
+          },
+          {
+            "constant": false,
+            "id": 85,
+            "name": "scores",
+            "nodeType": "VariableDeclaration",
+            "scope": 202,
+            "src": "763:29:1",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_mapping$_t_uint256_$_t_struct$_Score_$77_storage_$",
+              "typeString": "mapping(uint256 => struct Scorecard.Score)"
+            },
+            "typeName": {
+              "id": 84,
+              "keyType": {
+                "id": 82,
+                "name": "uint",
+                "nodeType": "ElementaryTypeName",
+                "src": "771:4:1",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                }
+              },
+              "nodeType": "Mapping",
+              "src": "763:22:1",
+              "typeDescriptions": {
+                "typeIdentifier": "t_mapping$_t_uint256_$_t_struct$_Score_$77_storage_$",
+                "typeString": "mapping(uint256 => struct Scorecard.Score)"
+              },
+              "valueType": {
+                "contractScope": null,
+                "id": 83,
+                "name": "Score",
+                "nodeType": "UserDefinedTypeName",
+                "referencedDeclaration": 77,
+                "src": "779:5:1",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_struct$_Score_$77_storage_ptr",
+                  "typeString": "struct Scorecard.Score"
+                }
+              }
+            },
+            "value": null,
+            "visibility": "internal"
+          },
+          {
+            "anonymous": false,
+            "documentation": null,
+            "id": 93,
+            "name": "studentAdded",
+            "nodeType": "EventDefinition",
+            "parameters": {
+              "id": 92,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 87,
+                  "indexed": false,
+                  "name": "_studentFirstName",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 93,
+                  "src": "818:24:1",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_memory_ptr",
+                    "typeString": "string"
+                  },
+                  "typeName": {
+                    "id": 86,
+                    "name": "string",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "818:6:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_string_storage_ptr",
+                      "typeString": "string"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 89,
+                  "indexed": false,
+                  "name": "_studentLastName",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 93,
+                  "src": "844:23:1",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_memory_ptr",
+                    "typeString": "string"
+                  },
+                  "typeName": {
+                    "id": 88,
+                    "name": "string",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "844:6:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_string_storage_ptr",
+                      "typeString": "string"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 91,
+                  "indexed": false,
+                  "name": "_studentId",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 93,
+                  "src": "869:18:1",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 90,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "869:7:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "817:71:1"
+            },
+            "src": "799:90:1"
+          },
+          {
+            "anonymous": false,
+            "documentation": null,
+            "id": 103,
+            "name": "studentScoresRecorded",
+            "nodeType": "EventDefinition",
+            "parameters": {
+              "id": 102,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 95,
+                  "indexed": false,
+                  "name": "_studentId",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 103,
+                  "src": "923:18:1",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 94,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "923:7:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 97,
+                  "indexed": false,
+                  "name": "_englishMarks",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 103,
+                  "src": "943:21:1",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 96,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "943:7:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 99,
+                  "indexed": false,
+                  "name": "_mathMarks",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 103,
+                  "src": "966:18:1",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 98,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "966:7:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 101,
+                  "indexed": false,
+                  "name": "_scienceMarks",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 103,
+                  "src": "986:21:1",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 100,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "986:7:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "922:86:1"
+            },
+            "src": "895:114:1"
+          },
+          {
+            "body": {
+              "id": 147,
+              "nodeType": "Block",
+              "src": "1174:426:1",
+              "statements": [
+                {
+                  "assignments": [
+                    115
+                  ],
+                  "declarations": [
+                    {
+                      "constant": false,
+                      "id": 115,
+                      "name": "studentObj",
+                      "nodeType": "VariableDeclaration",
+                      "scope": 147,
+                      "src": "1184:33:1",
+                      "stateVariable": false,
+                      "storageLocation": "storage",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_struct$_StudentDetails_$68_storage_ptr",
+                        "typeString": "struct Scorecard.StudentDetails"
+                      },
+                      "typeName": {
+                        "contractScope": null,
+                        "id": 114,
+                        "name": "StudentDetails",
+                        "nodeType": "UserDefinedTypeName",
+                        "referencedDeclaration": 68,
+                        "src": "1184:14:1",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_struct$_StudentDetails_$68_storage_ptr",
+                          "typeString": "struct Scorecard.StudentDetails"
+                        }
+                      },
+                      "value": null,
+                      "visibility": "internal"
+                    }
+                  ],
+                  "id": 119,
+                  "initialValue": {
+                    "argumentTypes": null,
+                    "baseExpression": {
+                      "argumentTypes": null,
+                      "id": 116,
+                      "name": "students",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 81,
+                      "src": "1220:8:1",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_mapping$_t_uint256_$_t_struct$_StudentDetails_$68_storage_$",
+                        "typeString": "mapping(uint256 => struct Scorecard.StudentDetails storage ref)"
+                      }
+                    },
+                    "id": 118,
+                    "indexExpression": {
+                      "argumentTypes": null,
+                      "id": 117,
+                      "name": "studentCount",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 37,
+                      "src": "1229:12:1",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "isConstant": false,
+                    "isLValue": true,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "nodeType": "IndexAccess",
+                    "src": "1220:22:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_struct$_StudentDetails_$68_storage",
+                      "typeString": "struct Scorecard.StudentDetails storage ref"
+                    }
+                  },
+                  "nodeType": "VariableDeclarationStatement",
+                  "src": "1184:58:1"
+                },
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 124,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "expression": {
+                        "argumentTypes": null,
+                        "id": 120,
+                        "name": "studentObj",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 115,
+                        "src": "1252:10:1",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_struct$_StudentDetails_$68_storage_ptr",
+                          "typeString": "struct Scorecard.StudentDetails storage pointer"
+                        }
+                      },
+                      "id": 122,
+                      "isConstant": false,
+                      "isLValue": true,
+                      "isPure": false,
+                      "lValueRequested": true,
+                      "memberName": "studentFirstName",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": 63,
+                      "src": "1252:27:1",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_string_storage",
+                        "typeString": "string storage ref"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "argumentTypes": null,
+                      "id": 123,
+                      "name": "_studentFirstName",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 105,
+                      "src": "1282:17:1",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_string_memory_ptr",
+                        "typeString": "string memory"
+                      }
+                    },
+                    "src": "1252:47:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_string_storage",
+                      "typeString": "string storage ref"
+                    }
+                  },
+                  "id": 125,
+                  "nodeType": "ExpressionStatement",
+                  "src": "1252:47:1"
+                },
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 130,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "expression": {
+                        "argumentTypes": null,
+                        "id": 126,
+                        "name": "studentObj",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 115,
+                        "src": "1309:10:1",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_struct$_StudentDetails_$68_storage_ptr",
+                          "typeString": "struct Scorecard.StudentDetails storage pointer"
+                        }
+                      },
+                      "id": 128,
+                      "isConstant": false,
+                      "isLValue": true,
+                      "isPure": false,
+                      "lValueRequested": true,
+                      "memberName": "studentLastName",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": 65,
+                      "src": "1309:26:1",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_string_storage",
+                        "typeString": "string storage ref"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "argumentTypes": null,
+                      "id": 129,
+                      "name": "_studentLastName",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 107,
+                      "src": "1338:16:1",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_string_memory_ptr",
+                        "typeString": "string memory"
+                      }
+                    },
+                    "src": "1309:45:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_string_storage",
+                      "typeString": "string storage ref"
+                    }
+                  },
+                  "id": 131,
+                  "nodeType": "ExpressionStatement",
+                  "src": "1309:45:1"
+                },
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 136,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "expression": {
+                        "argumentTypes": null,
+                        "id": 132,
+                        "name": "studentObj",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 115,
+                        "src": "1364:10:1",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_struct$_StudentDetails_$68_storage_ptr",
+                          "typeString": "struct Scorecard.StudentDetails storage pointer"
+                        }
+                      },
+                      "id": 134,
+                      "isConstant": false,
+                      "isLValue": true,
+                      "isPure": false,
+                      "lValueRequested": true,
+                      "memberName": "id",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": 67,
+                      "src": "1364:13:1",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "argumentTypes": null,
+                      "id": 135,
+                      "name": "studentCount",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 37,
+                      "src": "1380:12:1",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "src": "1364:28:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "id": 137,
+                  "nodeType": "ExpressionStatement",
+                  "src": "1364:28:1"
+                },
+                {
+                  "eventCall": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "id": 139,
+                        "name": "_studentFirstName",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 105,
+                        "src": "1518:17:1",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_string_memory_ptr",
+                          "typeString": "string memory"
+                        }
+                      },
+                      {
+                        "argumentTypes": null,
+                        "id": 140,
+                        "name": "_studentLastName",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 107,
+                        "src": "1537:16:1",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_string_memory_ptr",
+                          "typeString": "string memory"
+                        }
+                      },
+                      {
+                        "argumentTypes": null,
+                        "id": 141,
+                        "name": "studentCount",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 37,
+                        "src": "1555:12:1",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_string_memory_ptr",
+                          "typeString": "string memory"
+                        },
+                        {
+                          "typeIdentifier": "t_string_memory_ptr",
+                          "typeString": "string memory"
+                        },
+                        {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      ],
+                      "id": 138,
+                      "name": "studentAdded",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 93,
+                      "src": "1505:12:1",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_event_nonpayable$_t_string_memory_ptr_$_t_string_memory_ptr_$_t_uint256_$returns$__$",
+                        "typeString": "function (string memory,string memory,uint256)"
+                      }
+                    },
+                    "id": 142,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "1505:63:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$__$",
+                      "typeString": "tuple()"
+                    }
+                  },
+                  "id": 143,
+                  "nodeType": "EmitStatement",
+                  "src": "1500:68:1"
+                },
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 145,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "nodeType": "UnaryOperation",
+                    "operator": "++",
+                    "prefix": false,
+                    "src": "1579:14:1",
+                    "subExpression": {
+                      "argumentTypes": null,
+                      "id": 144,
+                      "name": "studentCount",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 37,
+                      "src": "1579:12:1",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "id": 146,
+                  "nodeType": "ExpressionStatement",
+                  "src": "1579:14:1"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 148,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [
+              {
+                "arguments": [
+                  {
+                    "argumentTypes": null,
+                    "expression": {
+                      "argumentTypes": null,
+                      "id": 110,
+                      "name": "msg",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 217,
+                      "src": "1163:3:1",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_magic_message",
+                        "typeString": "msg"
+                      }
+                    },
+                    "id": 111,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "memberName": "sender",
+                    "nodeType": "MemberAccess",
+                    "referencedDeclaration": null,
+                    "src": "1163:10:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address_payable",
+                      "typeString": "address payable"
+                    }
+                  }
+                ],
+                "id": 112,
+                "modifierName": {
+                  "argumentTypes": null,
+                  "id": 109,
+                  "name": "onlyClassTeacher",
+                  "nodeType": "Identifier",
+                  "overloadedDeclarations": [],
+                  "referencedDeclaration": 61,
+                  "src": "1146:16:1",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_modifier$_t_address_$",
+                    "typeString": "modifier (address)"
+                  }
+                },
+                "nodeType": "ModifierInvocation",
+                "src": "1146:28:1"
+              }
+            ],
+            "name": "addStudentDetails",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 108,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 105,
+                  "name": "_studentFirstName",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 148,
+                  "src": "1042:31:1",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_memory_ptr",
+                    "typeString": "string"
+                  },
+                  "typeName": {
+                    "id": 104,
+                    "name": "string",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1042:6:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_string_storage_ptr",
+                      "typeString": "string"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 107,
+                  "name": "_studentLastName",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 148,
+                  "src": "1107:30:1",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_memory_ptr",
+                    "typeString": "string"
+                  },
+                  "typeName": {
+                    "id": 106,
+                    "name": "string",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1107:6:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_string_storage_ptr",
+                      "typeString": "string"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1041:97:1"
+            },
+            "returnParameters": {
+              "id": 113,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "1174:0:1"
+            },
+            "scope": 202,
+            "src": "1015:585:1",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 200,
+              "nodeType": "Block",
+              "src": "1851:352:1",
+              "statements": [
+                {
+                  "assignments": [
+                    164
+                  ],
+                  "declarations": [
+                    {
+                      "constant": false,
+                      "id": 164,
+                      "name": "scoreObject",
+                      "nodeType": "VariableDeclaration",
+                      "scope": 200,
+                      "src": "1862:25:1",
+                      "stateVariable": false,
+                      "storageLocation": "storage",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_struct$_Score_$77_storage_ptr",
+                        "typeString": "struct Scorecard.Score"
+                      },
+                      "typeName": {
+                        "contractScope": null,
+                        "id": 163,
+                        "name": "Score",
+                        "nodeType": "UserDefinedTypeName",
+                        "referencedDeclaration": 77,
+                        "src": "1862:5:1",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_struct$_Score_$77_storage_ptr",
+                          "typeString": "struct Scorecard.Score"
+                        }
+                      },
+                      "value": null,
+                      "visibility": "internal"
+                    }
+                  ],
+                  "id": 168,
+                  "initialValue": {
+                    "argumentTypes": null,
+                    "baseExpression": {
+                      "argumentTypes": null,
+                      "id": 165,
+                      "name": "scores",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 85,
+                      "src": "1890:6:1",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_mapping$_t_uint256_$_t_struct$_Score_$77_storage_$",
+                        "typeString": "mapping(uint256 => struct Scorecard.Score storage ref)"
+                      }
+                    },
+                    "id": 167,
+                    "indexExpression": {
+                      "argumentTypes": null,
+                      "id": 166,
+                      "name": "_studentId",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 150,
+                      "src": "1897:10:1",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "isConstant": false,
+                    "isLValue": true,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "nodeType": "IndexAccess",
+                    "src": "1890:18:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_struct$_Score_$77_storage",
+                      "typeString": "struct Scorecard.Score storage ref"
+                    }
+                  },
+                  "nodeType": "VariableDeclarationStatement",
+                  "src": "1862:46:1"
+                },
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 173,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "expression": {
+                        "argumentTypes": null,
+                        "id": 169,
+                        "name": "scoreObject",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 164,
+                        "src": "1919:11:1",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_struct$_Score_$77_storage_ptr",
+                          "typeString": "struct Scorecard.Score storage pointer"
+                        }
+                      },
+                      "id": 171,
+                      "isConstant": false,
+                      "isLValue": true,
+                      "isPure": false,
+                      "lValueRequested": true,
+                      "memberName": "englishMarks",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": 72,
+                      "src": "1919:24:1",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "argumentTypes": null,
+                      "id": 172,
+                      "name": "_englishMarks",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 152,
+                      "src": "1946:13:1",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "src": "1919:40:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "id": 174,
+                  "nodeType": "ExpressionStatement",
+                  "src": "1919:40:1"
+                },
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 179,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "expression": {
+                        "argumentTypes": null,
+                        "id": 175,
+                        "name": "scoreObject",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 164,
+                        "src": "1969:11:1",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_struct$_Score_$77_storage_ptr",
+                          "typeString": "struct Scorecard.Score storage pointer"
+                        }
+                      },
+                      "id": 177,
+                      "isConstant": false,
+                      "isLValue": true,
+                      "isPure": false,
+                      "lValueRequested": true,
+                      "memberName": "mathMarks",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": 74,
+                      "src": "1969:21:1",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "argumentTypes": null,
+                      "id": 178,
+                      "name": "_mathMarks",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 154,
+                      "src": "1993:10:1",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "src": "1969:34:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "id": 180,
+                  "nodeType": "ExpressionStatement",
+                  "src": "1969:34:1"
+                },
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 185,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "expression": {
+                        "argumentTypes": null,
+                        "id": 181,
+                        "name": "scoreObject",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 164,
+                        "src": "2013:11:1",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_struct$_Score_$77_storage_ptr",
+                          "typeString": "struct Scorecard.Score storage pointer"
+                        }
+                      },
+                      "id": 183,
+                      "isConstant": false,
+                      "isLValue": true,
+                      "isPure": false,
+                      "lValueRequested": true,
+                      "memberName": "scienceMarks",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": 76,
+                      "src": "2013:24:1",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "argumentTypes": null,
+                      "id": 184,
+                      "name": "_scienceMarks",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 156,
+                      "src": "2040:13:1",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "src": "2013:40:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "id": 186,
+                  "nodeType": "ExpressionStatement",
+                  "src": "2013:40:1"
+                },
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 191,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "expression": {
+                        "argumentTypes": null,
+                        "id": 187,
+                        "name": "scoreObject",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 164,
+                        "src": "2063:11:1",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_struct$_Score_$77_storage_ptr",
+                          "typeString": "struct Scorecard.Score storage pointer"
+                        }
+                      },
+                      "id": 189,
+                      "isConstant": false,
+                      "isLValue": true,
+                      "isPure": false,
+                      "lValueRequested": true,
+                      "memberName": "studentId",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": 70,
+                      "src": "2063:21:1",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "argumentTypes": null,
+                      "id": 190,
+                      "name": "_studentId",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 150,
+                      "src": "2087:10:1",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "src": "2063:34:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "id": 192,
+                  "nodeType": "ExpressionStatement",
+                  "src": "2063:34:1"
+                },
+                {
+                  "eventCall": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "id": 194,
+                        "name": "_studentId",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 150,
+                        "src": "2143:10:1",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      },
+                      {
+                        "argumentTypes": null,
+                        "id": 195,
+                        "name": "_englishMarks",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 152,
+                        "src": "2155:13:1",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      },
+                      {
+                        "argumentTypes": null,
+                        "id": 196,
+                        "name": "_mathMarks",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 154,
+                        "src": "2170:10:1",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      },
+                      {
+                        "argumentTypes": null,
+                        "id": 197,
+                        "name": "_scienceMarks",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 156,
+                        "src": "2182:13:1",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        },
+                        {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        },
+                        {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        },
+                        {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      ],
+                      "id": 193,
+                      "name": "studentScoresRecorded",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 103,
+                      "src": "2121:21:1",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_event_nonpayable$_t_uint256_$_t_uint256_$_t_uint256_$_t_uint256_$returns$__$",
+                        "typeString": "function (uint256,uint256,uint256,uint256)"
+                      }
+                    },
+                    "id": 198,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "2121:75:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$__$",
+                      "typeString": "tuple()"
+                    }
+                  },
+                  "id": 199,
+                  "nodeType": "EmitStatement",
+                  "src": "2116:80:1"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 201,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [
+              {
+                "arguments": [
+                  {
+                    "argumentTypes": null,
+                    "expression": {
+                      "argumentTypes": null,
+                      "id": 159,
+                      "name": "msg",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 217,
+                      "src": "1839:3:1",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_magic_message",
+                        "typeString": "msg"
+                      }
+                    },
+                    "id": 160,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "memberName": "sender",
+                    "nodeType": "MemberAccess",
+                    "referencedDeclaration": null,
+                    "src": "1839:10:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address_payable",
+                      "typeString": "address payable"
+                    }
+                  }
+                ],
+                "id": 161,
+                "modifierName": {
+                  "argumentTypes": null,
+                  "id": 158,
+                  "name": "onlyClassTeacher",
+                  "nodeType": "Identifier",
+                  "overloadedDeclarations": [],
+                  "referencedDeclaration": 61,
+                  "src": "1822:16:1",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_modifier$_t_address_$",
+                    "typeString": "modifier (address)"
+                  }
+                },
+                "nodeType": "ModifierInvocation",
+                "src": "1822:28:1"
+              }
+            ],
+            "name": "addStudentScores",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 157,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 150,
+                  "name": "_studentId",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 201,
+                  "src": "1633:18:1",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 149,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1633:7:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 152,
+                  "name": "_englishMarks",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 201,
+                  "src": "1685:21:1",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 151,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1685:7:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 154,
+                  "name": "_mathMarks",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 201,
+                  "src": "1740:18:1",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 153,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1740:7:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 156,
+                  "name": "_scienceMarks",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 201,
+                  "src": "1792:21:1",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 155,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1792:7:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1631:183:1"
+            },
+            "returnParameters": {
+              "id": 162,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "1851:0:1"
+            },
+            "scope": 202,
+            "src": "1606:597:1",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "public"
+          }
+        ],
+        "scope": 203,
+        "src": "70:2135:1"
+      }
+    ],
+    "src": "37:2168:1"
+  },
+  "legacyAST": {
+    "attributes": {
+      "absolutePath": "project:/contracts/Scorecard.sol",
+      "exportedSymbols": {
+        "Scorecard": [
+          202
+        ]
+      }
+    },
+    "children": [
+      {
+        "attributes": {
+          "literals": [
+            "solidity",
+            ">=",
+            "0.4",
+            ".0",
+            "<",
+            "0.9",
+            ".0"
+          ]
+        },
+        "id": 34,
+        "name": "PragmaDirective",
+        "src": "37:31:1"
+      },
+      {
+        "attributes": {
+          "baseContracts": [
+            null
+          ],
+          "contractDependencies": [
+            null
+          ],
+          "contractKind": "contract",
+          "documentation": null,
+          "fullyImplemented": true,
+          "linearizedBaseContracts": [
+            202
+          ],
+          "name": "Scorecard",
+          "scope": 203
+        },
+        "children": [
+          {
+            "attributes": {
+              "constant": false,
+              "name": "studentCount",
+              "scope": 202,
+              "stateVariable": true,
+              "storageLocation": "default",
+              "type": "uint256",
+              "visibility": "internal"
+            },
+            "children": [
+              {
+                "attributes": {
+                  "name": "uint256",
+                  "type": "uint256"
+                },
+                "id": 35,
+                "name": "ElementaryTypeName",
+                "src": "118:7:1"
+              },
+              {
+                "attributes": {
+                  "argumentTypes": null,
+                  "hexvalue": "30",
+                  "isConstant": false,
+                  "isLValue": false,
+                  "isPure": true,
+                  "lValueRequested": false,
+                  "subdenomination": null,
+                  "token": "number",
+                  "type": "int_const 0",
+                  "value": "0"
+                },
+                "id": 36,
+                "name": "Literal",
+                "src": "141:1:1"
+              }
+            ],
+            "id": 37,
+            "name": "VariableDeclaration",
+            "src": "118:24:1"
+          },
+          {
+            "attributes": {
+              "constant": false,
+              "name": "classTeacher",
+              "scope": 202,
+              "stateVariable": true,
+              "storageLocation": "default",
+              "type": "address",
+              "value": null,
+              "visibility": "public"
+            },
+            "children": [
+              {
+                "attributes": {
+                  "name": "address",
+                  "stateMutability": "nonpayable",
+                  "type": "address"
+                },
+                "id": 38,
+                "name": "ElementaryTypeName",
+                "src": "178:7:1"
+              }
+            ],
+            "id": 39,
+            "name": "VariableDeclaration",
+            "src": "178:27:1"
+          },
+          {
+            "attributes": {
+              "documentation": null,
+              "implemented": true,
+              "isConstructor": true,
+              "kind": "constructor",
+              "modifiers": [
+                null
+              ],
+              "name": "",
+              "scope": 202,
+              "stateMutability": "nonpayable",
+              "superFunction": null,
+              "visibility": "public"
+            },
+            "children": [
+              {
+                "attributes": {
+                  "parameters": [
+                    null
+                  ]
+                },
+                "children": [],
+                "id": 40,
+                "name": "ParameterList",
+                "src": "223:2:1"
+              },
+              {
+                "attributes": {
+                  "parameters": [
+                    null
+                  ]
+                },
+                "children": [],
+                "id": 41,
+                "name": "ParameterList",
+                "src": "233:0:1"
+              },
+              {
+                "children": [
+                  {
+                    "children": [
+                      {
+                        "attributes": {
+                          "argumentTypes": null,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "operator": "=",
+                          "type": "address"
+                        },
+                        "children": [
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "overloadedDeclarations": [
+                                null
+                              ],
+                              "referencedDeclaration": 39,
+                              "type": "address",
+                              "value": "classTeacher"
+                            },
+                            "id": 42,
+                            "name": "Identifier",
+                            "src": "243:12:1"
+                          },
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "isConstant": false,
+                              "isLValue": false,
+                              "isPure": false,
+                              "lValueRequested": false,
+                              "member_name": "sender",
+                              "referencedDeclaration": null,
+                              "type": "address payable"
+                            },
+                            "children": [
+                              {
+                                "attributes": {
+                                  "argumentTypes": null,
+                                  "overloadedDeclarations": [
+                                    null
+                                  ],
+                                  "referencedDeclaration": 217,
+                                  "type": "msg",
+                                  "value": "msg"
+                                },
+                                "id": 43,
+                                "name": "Identifier",
+                                "src": "258:3:1"
+                              }
+                            ],
+                            "id": 44,
+                            "name": "MemberAccess",
+                            "src": "258:10:1"
+                          }
+                        ],
+                        "id": 45,
+                        "name": "Assignment",
+                        "src": "243:25:1"
+                      }
+                    ],
+                    "id": 46,
+                    "name": "ExpressionStatement",
+                    "src": "243:25:1"
+                  }
+                ],
+                "id": 47,
+                "name": "Block",
+                "src": "233:42:1"
+              }
+            ],
+            "id": 48,
+            "name": "FunctionDefinition",
+            "src": "212:63:1"
+          },
+          {
+            "attributes": {
+              "documentation": null,
+              "name": "onlyClassTeacher",
+              "visibility": "internal"
+            },
+            "children": [
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "name": "_classTeacher",
+                      "scope": 61,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "address",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "address",
+                          "stateMutability": "nonpayable",
+                          "type": "address"
+                        },
+                        "id": 49,
+                        "name": "ElementaryTypeName",
+                        "src": "307:7:1"
+                      }
+                    ],
+                    "id": 50,
+                    "name": "VariableDeclaration",
+                    "src": "307:21:1"
+                  }
+                ],
+                "id": 51,
+                "name": "ParameterList",
+                "src": "306:23:1"
+              },
+              {
+                "children": [
+                  {
+                    "children": [
+                      {
+                        "attributes": {
+                          "argumentTypes": null,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "isStructConstructorCall": false,
+                          "lValueRequested": false,
+                          "names": [
+                            null
+                          ],
+                          "type": "tuple()",
+                          "type_conversion": false
+                        },
+                        "children": [
+                          {
+                            "attributes": {
+                              "argumentTypes": [
+                                {
+                                  "typeIdentifier": "t_bool",
+                                  "typeString": "bool"
+                                },
+                                {
+                                  "typeIdentifier": "t_stringliteral_f8e1d624b34f126c06ebb3b35efadd3a86e23943e7ce91fcea2aa1032f0cde09",
+                                  "typeString": "literal_string \"Only the class teacher has access to this function\""
+                                }
+                              ],
+                              "overloadedDeclarations": [
+                                220,
+                                221
+                              ],
+                              "referencedDeclaration": 221,
+                              "type": "function (bool,string memory) pure",
+                              "value": "require"
+                            },
+                            "id": 52,
+                            "name": "Identifier",
+                            "src": "340:7:1"
+                          },
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "commonType": {
+                                "typeIdentifier": "t_address",
+                                "typeString": "address"
+                              },
+                              "isConstant": false,
+                              "isLValue": false,
+                              "isPure": false,
+                              "lValueRequested": false,
+                              "operator": "==",
+                              "type": "bool"
+                            },
+                            "children": [
+                              {
+                                "attributes": {
+                                  "argumentTypes": null,
+                                  "overloadedDeclarations": [
+                                    null
+                                  ],
+                                  "referencedDeclaration": 39,
+                                  "type": "address",
+                                  "value": "classTeacher"
+                                },
+                                "id": 53,
+                                "name": "Identifier",
+                                "src": "348:12:1"
+                              },
+                              {
+                                "attributes": {
+                                  "argumentTypes": null,
+                                  "overloadedDeclarations": [
+                                    null
+                                  ],
+                                  "referencedDeclaration": 50,
+                                  "type": "address",
+                                  "value": "_classTeacher"
+                                },
+                                "id": 54,
+                                "name": "Identifier",
+                                "src": "364:13:1"
+                              }
+                            ],
+                            "id": 55,
+                            "name": "BinaryOperation",
+                            "src": "348:29:1"
+                          },
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "hexvalue": "4f6e6c792074686520636c6173732074656163686572206861732061636365737320746f20746869732066756e6374696f6e",
+                              "isConstant": false,
+                              "isLValue": false,
+                              "isPure": true,
+                              "lValueRequested": false,
+                              "subdenomination": null,
+                              "token": "string",
+                              "type": "literal_string \"Only the class teacher has access to this function\"",
+                              "value": "Only the class teacher has access to this function"
+                            },
+                            "id": 56,
+                            "name": "Literal",
+                            "src": "379:52:1"
+                          }
+                        ],
+                        "id": 57,
+                        "name": "FunctionCall",
+                        "src": "340:92:1"
+                      }
+                    ],
+                    "id": 58,
+                    "name": "ExpressionStatement",
+                    "src": "340:92:1"
+                  },
+                  {
+                    "id": 59,
+                    "name": "PlaceholderStatement",
+                    "src": "442:1:1"
+                  }
+                ],
+                "id": 60,
+                "name": "Block",
+                "src": "330:122:1"
+              }
+            ],
+            "id": 61,
+            "name": "ModifierDefinition",
+            "src": "281:171:1"
+          },
+          {
+            "attributes": {
+              "canonicalName": "Scorecard.StudentDetails",
+              "name": "StudentDetails",
+              "scope": 202,
+              "visibility": "public"
+            },
+            "children": [
+              {
+                "attributes": {
+                  "constant": false,
+                  "name": "studentFirstName",
+                  "scope": 68,
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "type": "string",
+                  "value": null,
+                  "visibility": "internal"
+                },
+                "children": [
+                  {
+                    "attributes": {
+                      "name": "string",
+                      "type": "string"
+                    },
+                    "id": 62,
+                    "name": "ElementaryTypeName",
+                    "src": "489:6:1"
+                  }
+                ],
+                "id": 63,
+                "name": "VariableDeclaration",
+                "src": "489:23:1"
+              },
+              {
+                "attributes": {
+                  "constant": false,
+                  "name": "studentLastName",
+                  "scope": 68,
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "type": "string",
+                  "value": null,
+                  "visibility": "internal"
+                },
+                "children": [
+                  {
+                    "attributes": {
+                      "name": "string",
+                      "type": "string"
+                    },
+                    "id": 64,
+                    "name": "ElementaryTypeName",
+                    "src": "522:6:1"
+                  }
+                ],
+                "id": 65,
+                "name": "VariableDeclaration",
+                "src": "522:22:1"
+              },
+              {
+                "attributes": {
+                  "constant": false,
+                  "name": "id",
+                  "scope": 68,
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "type": "uint256",
+                  "value": null,
+                  "visibility": "internal"
+                },
+                "children": [
+                  {
+                    "attributes": {
+                      "name": "uint256",
+                      "type": "uint256"
+                    },
+                    "id": 66,
+                    "name": "ElementaryTypeName",
+                    "src": "554:7:1"
+                  }
+                ],
+                "id": 67,
+                "name": "VariableDeclaration",
+                "src": "554:10:1"
+              }
+            ],
+            "id": 68,
+            "name": "StructDefinition",
+            "src": "458:113:1"
+          },
+          {
+            "attributes": {
+              "canonicalName": "Scorecard.Score",
+              "name": "Score",
+              "scope": 202,
+              "visibility": "public"
+            },
+            "children": [
+              {
+                "attributes": {
+                  "constant": false,
+                  "name": "studentId",
+                  "scope": 77,
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "type": "uint256",
+                  "value": null,
+                  "visibility": "internal"
+                },
+                "children": [
+                  {
+                    "attributes": {
+                      "name": "uint256",
+                      "type": "uint256"
+                    },
+                    "id": 69,
+                    "name": "ElementaryTypeName",
+                    "src": "599:7:1"
+                  }
+                ],
+                "id": 70,
+                "name": "VariableDeclaration",
+                "src": "599:17:1"
+              },
+              {
+                "attributes": {
+                  "constant": false,
+                  "name": "englishMarks",
+                  "scope": 77,
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "type": "uint256",
+                  "value": null,
+                  "visibility": "internal"
+                },
+                "children": [
+                  {
+                    "attributes": {
+                      "name": "uint256",
+                      "type": "uint256"
+                    },
+                    "id": 71,
+                    "name": "ElementaryTypeName",
+                    "src": "626:7:1"
+                  }
+                ],
+                "id": 72,
+                "name": "VariableDeclaration",
+                "src": "626:20:1"
+              },
+              {
+                "attributes": {
+                  "constant": false,
+                  "name": "mathMarks",
+                  "scope": 77,
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "type": "uint256",
+                  "value": null,
+                  "visibility": "internal"
+                },
+                "children": [
+                  {
+                    "attributes": {
+                      "name": "uint256",
+                      "type": "uint256"
+                    },
+                    "id": 73,
+                    "name": "ElementaryTypeName",
+                    "src": "656:7:1"
+                  }
+                ],
+                "id": 74,
+                "name": "VariableDeclaration",
+                "src": "656:17:1"
+              },
+              {
+                "attributes": {
+                  "constant": false,
+                  "name": "scienceMarks",
+                  "scope": 77,
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "type": "uint256",
+                  "value": null,
+                  "visibility": "internal"
+                },
+                "children": [
+                  {
+                    "attributes": {
+                      "name": "uint256",
+                      "type": "uint256"
+                    },
+                    "id": 75,
+                    "name": "ElementaryTypeName",
+                    "src": "683:7:1"
+                  }
+                ],
+                "id": 76,
+                "name": "VariableDeclaration",
+                "src": "683:20:1"
+              }
+            ],
+            "id": 77,
+            "name": "StructDefinition",
+            "src": "577:133:1"
+          },
+          {
+            "attributes": {
+              "constant": false,
+              "name": "students",
+              "scope": 202,
+              "stateVariable": true,
+              "storageLocation": "default",
+              "type": "mapping(uint256 => struct Scorecard.StudentDetails)",
+              "value": null,
+              "visibility": "internal"
+            },
+            "children": [
+              {
+                "attributes": {
+                  "type": "mapping(uint256 => struct Scorecard.StudentDetails)"
+                },
+                "children": [
+                  {
+                    "attributes": {
+                      "name": "uint",
+                      "type": "uint256"
+                    },
+                    "id": 78,
+                    "name": "ElementaryTypeName",
+                    "src": "724:4:1"
+                  },
+                  {
+                    "attributes": {
+                      "contractScope": null,
+                      "name": "StudentDetails",
+                      "referencedDeclaration": 68,
+                      "type": "struct Scorecard.StudentDetails"
+                    },
+                    "id": 79,
+                    "name": "UserDefinedTypeName",
+                    "src": "732:14:1"
+                  }
+                ],
+                "id": 80,
+                "name": "Mapping",
+                "src": "716:31:1"
+              }
+            ],
+            "id": 81,
+            "name": "VariableDeclaration",
+            "src": "716:40:1"
+          },
+          {
+            "attributes": {
+              "constant": false,
+              "name": "scores",
+              "scope": 202,
+              "stateVariable": true,
+              "storageLocation": "default",
+              "type": "mapping(uint256 => struct Scorecard.Score)",
+              "value": null,
+              "visibility": "internal"
+            },
+            "children": [
+              {
+                "attributes": {
+                  "type": "mapping(uint256 => struct Scorecard.Score)"
+                },
+                "children": [
+                  {
+                    "attributes": {
+                      "name": "uint",
+                      "type": "uint256"
+                    },
+                    "id": 82,
+                    "name": "ElementaryTypeName",
+                    "src": "771:4:1"
+                  },
+                  {
+                    "attributes": {
+                      "contractScope": null,
+                      "name": "Score",
+                      "referencedDeclaration": 77,
+                      "type": "struct Scorecard.Score"
+                    },
+                    "id": 83,
+                    "name": "UserDefinedTypeName",
+                    "src": "779:5:1"
+                  }
+                ],
+                "id": 84,
+                "name": "Mapping",
+                "src": "763:22:1"
+              }
+            ],
+            "id": 85,
+            "name": "VariableDeclaration",
+            "src": "763:29:1"
+          },
+          {
+            "attributes": {
+              "anonymous": false,
+              "documentation": null,
+              "name": "studentAdded"
+            },
+            "children": [
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "indexed": false,
+                      "name": "_studentFirstName",
+                      "scope": 93,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "string",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "string",
+                          "type": "string"
+                        },
+                        "id": 86,
+                        "name": "ElementaryTypeName",
+                        "src": "818:6:1"
+                      }
+                    ],
+                    "id": 87,
+                    "name": "VariableDeclaration",
+                    "src": "818:24:1"
+                  },
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "indexed": false,
+                      "name": "_studentLastName",
+                      "scope": 93,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "string",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "string",
+                          "type": "string"
+                        },
+                        "id": 88,
+                        "name": "ElementaryTypeName",
+                        "src": "844:6:1"
+                      }
+                    ],
+                    "id": 89,
+                    "name": "VariableDeclaration",
+                    "src": "844:23:1"
+                  },
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "indexed": false,
+                      "name": "_studentId",
+                      "scope": 93,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "uint256",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "uint256",
+                          "type": "uint256"
+                        },
+                        "id": 90,
+                        "name": "ElementaryTypeName",
+                        "src": "869:7:1"
+                      }
+                    ],
+                    "id": 91,
+                    "name": "VariableDeclaration",
+                    "src": "869:18:1"
+                  }
+                ],
+                "id": 92,
+                "name": "ParameterList",
+                "src": "817:71:1"
+              }
+            ],
+            "id": 93,
+            "name": "EventDefinition",
+            "src": "799:90:1"
+          },
+          {
+            "attributes": {
+              "anonymous": false,
+              "documentation": null,
+              "name": "studentScoresRecorded"
+            },
+            "children": [
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "indexed": false,
+                      "name": "_studentId",
+                      "scope": 103,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "uint256",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "uint256",
+                          "type": "uint256"
+                        },
+                        "id": 94,
+                        "name": "ElementaryTypeName",
+                        "src": "923:7:1"
+                      }
+                    ],
+                    "id": 95,
+                    "name": "VariableDeclaration",
+                    "src": "923:18:1"
+                  },
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "indexed": false,
+                      "name": "_englishMarks",
+                      "scope": 103,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "uint256",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "uint256",
+                          "type": "uint256"
+                        },
+                        "id": 96,
+                        "name": "ElementaryTypeName",
+                        "src": "943:7:1"
+                      }
+                    ],
+                    "id": 97,
+                    "name": "VariableDeclaration",
+                    "src": "943:21:1"
+                  },
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "indexed": false,
+                      "name": "_mathMarks",
+                      "scope": 103,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "uint256",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "uint256",
+                          "type": "uint256"
+                        },
+                        "id": 98,
+                        "name": "ElementaryTypeName",
+                        "src": "966:7:1"
+                      }
+                    ],
+                    "id": 99,
+                    "name": "VariableDeclaration",
+                    "src": "966:18:1"
+                  },
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "indexed": false,
+                      "name": "_scienceMarks",
+                      "scope": 103,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "uint256",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "uint256",
+                          "type": "uint256"
+                        },
+                        "id": 100,
+                        "name": "ElementaryTypeName",
+                        "src": "986:7:1"
+                      }
+                    ],
+                    "id": 101,
+                    "name": "VariableDeclaration",
+                    "src": "986:21:1"
+                  }
+                ],
+                "id": 102,
+                "name": "ParameterList",
+                "src": "922:86:1"
+              }
+            ],
+            "id": 103,
+            "name": "EventDefinition",
+            "src": "895:114:1"
+          },
+          {
+            "attributes": {
+              "documentation": null,
+              "implemented": true,
+              "isConstructor": false,
+              "kind": "function",
+              "name": "addStudentDetails",
+              "scope": 202,
+              "stateMutability": "nonpayable",
+              "superFunction": null,
+              "visibility": "public"
+            },
+            "children": [
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "name": "_studentFirstName",
+                      "scope": 148,
+                      "stateVariable": false,
+                      "storageLocation": "memory",
+                      "type": "string",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "string",
+                          "type": "string"
+                        },
+                        "id": 104,
+                        "name": "ElementaryTypeName",
+                        "src": "1042:6:1"
+                      }
+                    ],
+                    "id": 105,
+                    "name": "VariableDeclaration",
+                    "src": "1042:31:1"
+                  },
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "name": "_studentLastName",
+                      "scope": 148,
+                      "stateVariable": false,
+                      "storageLocation": "memory",
+                      "type": "string",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "string",
+                          "type": "string"
+                        },
+                        "id": 106,
+                        "name": "ElementaryTypeName",
+                        "src": "1107:6:1"
+                      }
+                    ],
+                    "id": 107,
+                    "name": "VariableDeclaration",
+                    "src": "1107:30:1"
+                  }
+                ],
+                "id": 108,
+                "name": "ParameterList",
+                "src": "1041:97:1"
+              },
+              {
+                "attributes": {
+                  "parameters": [
+                    null
+                  ]
+                },
+                "children": [],
+                "id": 113,
+                "name": "ParameterList",
+                "src": "1174:0:1"
+              },
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "argumentTypes": null,
+                      "overloadedDeclarations": [
+                        null
+                      ],
+                      "referencedDeclaration": 61,
+                      "type": "modifier (address)",
+                      "value": "onlyClassTeacher"
+                    },
+                    "id": 109,
+                    "name": "Identifier",
+                    "src": "1146:16:1"
+                  },
+                  {
+                    "attributes": {
+                      "argumentTypes": null,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "member_name": "sender",
+                      "referencedDeclaration": null,
+                      "type": "address payable"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "argumentTypes": null,
+                          "overloadedDeclarations": [
+                            null
+                          ],
+                          "referencedDeclaration": 217,
+                          "type": "msg",
+                          "value": "msg"
+                        },
+                        "id": 110,
+                        "name": "Identifier",
+                        "src": "1163:3:1"
+                      }
+                    ],
+                    "id": 111,
+                    "name": "MemberAccess",
+                    "src": "1163:10:1"
+                  }
+                ],
+                "id": 112,
+                "name": "ModifierInvocation",
+                "src": "1146:28:1"
+              },
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "assignments": [
+                        115
+                      ]
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "constant": false,
+                          "name": "studentObj",
+                          "scope": 147,
+                          "stateVariable": false,
+                          "storageLocation": "storage",
+                          "type": "struct Scorecard.StudentDetails",
+                          "value": null,
+                          "visibility": "internal"
+                        },
+                        "children": [
+                          {
+                            "attributes": {
+                              "contractScope": null,
+                              "name": "StudentDetails",
+                              "referencedDeclaration": 68,
+                              "type": "struct Scorecard.StudentDetails"
+                            },
+                            "id": 114,
+                            "name": "UserDefinedTypeName",
+                            "src": "1184:14:1"
+                          }
+                        ],
+                        "id": 115,
+                        "name": "VariableDeclaration",
+                        "src": "1184:33:1"
+                      },
+                      {
+                        "attributes": {
+                          "argumentTypes": null,
+                          "isConstant": false,
+                          "isLValue": true,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "type": "struct Scorecard.StudentDetails storage ref"
+                        },
+                        "children": [
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "overloadedDeclarations": [
+                                null
+                              ],
+                              "referencedDeclaration": 81,
+                              "type": "mapping(uint256 => struct Scorecard.StudentDetails storage ref)",
+                              "value": "students"
+                            },
+                            "id": 116,
+                            "name": "Identifier",
+                            "src": "1220:8:1"
+                          },
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "overloadedDeclarations": [
+                                null
+                              ],
+                              "referencedDeclaration": 37,
+                              "type": "uint256",
+                              "value": "studentCount"
+                            },
+                            "id": 117,
+                            "name": "Identifier",
+                            "src": "1229:12:1"
+                          }
+                        ],
+                        "id": 118,
+                        "name": "IndexAccess",
+                        "src": "1220:22:1"
+                      }
+                    ],
+                    "id": 119,
+                    "name": "VariableDeclarationStatement",
+                    "src": "1184:58:1"
+                  },
+                  {
+                    "children": [
+                      {
+                        "attributes": {
+                          "argumentTypes": null,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "operator": "=",
+                          "type": "string storage ref"
+                        },
+                        "children": [
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "isConstant": false,
+                              "isLValue": true,
+                              "isPure": false,
+                              "lValueRequested": true,
+                              "member_name": "studentFirstName",
+                              "referencedDeclaration": 63,
+                              "type": "string storage ref"
+                            },
+                            "children": [
+                              {
+                                "attributes": {
+                                  "argumentTypes": null,
+                                  "overloadedDeclarations": [
+                                    null
+                                  ],
+                                  "referencedDeclaration": 115,
+                                  "type": "struct Scorecard.StudentDetails storage pointer",
+                                  "value": "studentObj"
+                                },
+                                "id": 120,
+                                "name": "Identifier",
+                                "src": "1252:10:1"
+                              }
+                            ],
+                            "id": 122,
+                            "name": "MemberAccess",
+                            "src": "1252:27:1"
+                          },
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "overloadedDeclarations": [
+                                null
+                              ],
+                              "referencedDeclaration": 105,
+                              "type": "string memory",
+                              "value": "_studentFirstName"
+                            },
+                            "id": 123,
+                            "name": "Identifier",
+                            "src": "1282:17:1"
+                          }
+                        ],
+                        "id": 124,
+                        "name": "Assignment",
+                        "src": "1252:47:1"
+                      }
+                    ],
+                    "id": 125,
+                    "name": "ExpressionStatement",
+                    "src": "1252:47:1"
+                  },
+                  {
+                    "children": [
+                      {
+                        "attributes": {
+                          "argumentTypes": null,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "operator": "=",
+                          "type": "string storage ref"
+                        },
+                        "children": [
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "isConstant": false,
+                              "isLValue": true,
+                              "isPure": false,
+                              "lValueRequested": true,
+                              "member_name": "studentLastName",
+                              "referencedDeclaration": 65,
+                              "type": "string storage ref"
+                            },
+                            "children": [
+                              {
+                                "attributes": {
+                                  "argumentTypes": null,
+                                  "overloadedDeclarations": [
+                                    null
+                                  ],
+                                  "referencedDeclaration": 115,
+                                  "type": "struct Scorecard.StudentDetails storage pointer",
+                                  "value": "studentObj"
+                                },
+                                "id": 126,
+                                "name": "Identifier",
+                                "src": "1309:10:1"
+                              }
+                            ],
+                            "id": 128,
+                            "name": "MemberAccess",
+                            "src": "1309:26:1"
+                          },
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "overloadedDeclarations": [
+                                null
+                              ],
+                              "referencedDeclaration": 107,
+                              "type": "string memory",
+                              "value": "_studentLastName"
+                            },
+                            "id": 129,
+                            "name": "Identifier",
+                            "src": "1338:16:1"
+                          }
+                        ],
+                        "id": 130,
+                        "name": "Assignment",
+                        "src": "1309:45:1"
+                      }
+                    ],
+                    "id": 131,
+                    "name": "ExpressionStatement",
+                    "src": "1309:45:1"
+                  },
+                  {
+                    "children": [
+                      {
+                        "attributes": {
+                          "argumentTypes": null,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "operator": "=",
+                          "type": "uint256"
+                        },
+                        "children": [
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "isConstant": false,
+                              "isLValue": true,
+                              "isPure": false,
+                              "lValueRequested": true,
+                              "member_name": "id",
+                              "referencedDeclaration": 67,
+                              "type": "uint256"
+                            },
+                            "children": [
+                              {
+                                "attributes": {
+                                  "argumentTypes": null,
+                                  "overloadedDeclarations": [
+                                    null
+                                  ],
+                                  "referencedDeclaration": 115,
+                                  "type": "struct Scorecard.StudentDetails storage pointer",
+                                  "value": "studentObj"
+                                },
+                                "id": 132,
+                                "name": "Identifier",
+                                "src": "1364:10:1"
+                              }
+                            ],
+                            "id": 134,
+                            "name": "MemberAccess",
+                            "src": "1364:13:1"
+                          },
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "overloadedDeclarations": [
+                                null
+                              ],
+                              "referencedDeclaration": 37,
+                              "type": "uint256",
+                              "value": "studentCount"
+                            },
+                            "id": 135,
+                            "name": "Identifier",
+                            "src": "1380:12:1"
+                          }
+                        ],
+                        "id": 136,
+                        "name": "Assignment",
+                        "src": "1364:28:1"
+                      }
+                    ],
+                    "id": 137,
+                    "name": "ExpressionStatement",
+                    "src": "1364:28:1"
+                  },
+                  {
+                    "children": [
+                      {
+                        "attributes": {
+                          "argumentTypes": null,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "isStructConstructorCall": false,
+                          "lValueRequested": false,
+                          "names": [
+                            null
+                          ],
+                          "type": "tuple()",
+                          "type_conversion": false
+                        },
+                        "children": [
+                          {
+                            "attributes": {
+                              "argumentTypes": [
+                                {
+                                  "typeIdentifier": "t_string_memory_ptr",
+                                  "typeString": "string memory"
+                                },
+                                {
+                                  "typeIdentifier": "t_string_memory_ptr",
+                                  "typeString": "string memory"
+                                },
+                                {
+                                  "typeIdentifier": "t_uint256",
+                                  "typeString": "uint256"
+                                }
+                              ],
+                              "overloadedDeclarations": [
+                                null
+                              ],
+                              "referencedDeclaration": 93,
+                              "type": "function (string memory,string memory,uint256)",
+                              "value": "studentAdded"
+                            },
+                            "id": 138,
+                            "name": "Identifier",
+                            "src": "1505:12:1"
+                          },
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "overloadedDeclarations": [
+                                null
+                              ],
+                              "referencedDeclaration": 105,
+                              "type": "string memory",
+                              "value": "_studentFirstName"
+                            },
+                            "id": 139,
+                            "name": "Identifier",
+                            "src": "1518:17:1"
+                          },
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "overloadedDeclarations": [
+                                null
+                              ],
+                              "referencedDeclaration": 107,
+                              "type": "string memory",
+                              "value": "_studentLastName"
+                            },
+                            "id": 140,
+                            "name": "Identifier",
+                            "src": "1537:16:1"
+                          },
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "overloadedDeclarations": [
+                                null
+                              ],
+                              "referencedDeclaration": 37,
+                              "type": "uint256",
+                              "value": "studentCount"
+                            },
+                            "id": 141,
+                            "name": "Identifier",
+                            "src": "1555:12:1"
+                          }
+                        ],
+                        "id": 142,
+                        "name": "FunctionCall",
+                        "src": "1505:63:1"
+                      }
+                    ],
+                    "id": 143,
+                    "name": "EmitStatement",
+                    "src": "1500:68:1"
+                  },
+                  {
+                    "children": [
+                      {
+                        "attributes": {
+                          "argumentTypes": null,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "operator": "++",
+                          "prefix": false,
+                          "type": "uint256"
+                        },
+                        "children": [
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "overloadedDeclarations": [
+                                null
+                              ],
+                              "referencedDeclaration": 37,
+                              "type": "uint256",
+                              "value": "studentCount"
+                            },
+                            "id": 144,
+                            "name": "Identifier",
+                            "src": "1579:12:1"
+                          }
+                        ],
+                        "id": 145,
+                        "name": "UnaryOperation",
+                        "src": "1579:14:1"
+                      }
+                    ],
+                    "id": 146,
+                    "name": "ExpressionStatement",
+                    "src": "1579:14:1"
+                  }
+                ],
+                "id": 147,
+                "name": "Block",
+                "src": "1174:426:1"
+              }
+            ],
+            "id": 148,
+            "name": "FunctionDefinition",
+            "src": "1015:585:1"
+          },
+          {
+            "attributes": {
+              "documentation": null,
+              "implemented": true,
+              "isConstructor": false,
+              "kind": "function",
+              "name": "addStudentScores",
+              "scope": 202,
+              "stateMutability": "nonpayable",
+              "superFunction": null,
+              "visibility": "public"
+            },
+            "children": [
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "name": "_studentId",
+                      "scope": 201,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "uint256",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "uint256",
+                          "type": "uint256"
+                        },
+                        "id": 149,
+                        "name": "ElementaryTypeName",
+                        "src": "1633:7:1"
+                      }
+                    ],
+                    "id": 150,
+                    "name": "VariableDeclaration",
+                    "src": "1633:18:1"
+                  },
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "name": "_englishMarks",
+                      "scope": 201,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "uint256",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "uint256",
+                          "type": "uint256"
+                        },
+                        "id": 151,
+                        "name": "ElementaryTypeName",
+                        "src": "1685:7:1"
+                      }
+                    ],
+                    "id": 152,
+                    "name": "VariableDeclaration",
+                    "src": "1685:21:1"
+                  },
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "name": "_mathMarks",
+                      "scope": 201,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "uint256",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "uint256",
+                          "type": "uint256"
+                        },
+                        "id": 153,
+                        "name": "ElementaryTypeName",
+                        "src": "1740:7:1"
+                      }
+                    ],
+                    "id": 154,
+                    "name": "VariableDeclaration",
+                    "src": "1740:18:1"
+                  },
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "name": "_scienceMarks",
+                      "scope": 201,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "uint256",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "uint256",
+                          "type": "uint256"
+                        },
+                        "id": 155,
+                        "name": "ElementaryTypeName",
+                        "src": "1792:7:1"
+                      }
+                    ],
+                    "id": 156,
+                    "name": "VariableDeclaration",
+                    "src": "1792:21:1"
+                  }
+                ],
+                "id": 157,
+                "name": "ParameterList",
+                "src": "1631:183:1"
+              },
+              {
+                "attributes": {
+                  "parameters": [
+                    null
+                  ]
+                },
+                "children": [],
+                "id": 162,
+                "name": "ParameterList",
+                "src": "1851:0:1"
+              },
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "argumentTypes": null,
+                      "overloadedDeclarations": [
+                        null
+                      ],
+                      "referencedDeclaration": 61,
+                      "type": "modifier (address)",
+                      "value": "onlyClassTeacher"
+                    },
+                    "id": 158,
+                    "name": "Identifier",
+                    "src": "1822:16:1"
+                  },
+                  {
+                    "attributes": {
+                      "argumentTypes": null,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "member_name": "sender",
+                      "referencedDeclaration": null,
+                      "type": "address payable"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "argumentTypes": null,
+                          "overloadedDeclarations": [
+                            null
+                          ],
+                          "referencedDeclaration": 217,
+                          "type": "msg",
+                          "value": "msg"
+                        },
+                        "id": 159,
+                        "name": "Identifier",
+                        "src": "1839:3:1"
+                      }
+                    ],
+                    "id": 160,
+                    "name": "MemberAccess",
+                    "src": "1839:10:1"
+                  }
+                ],
+                "id": 161,
+                "name": "ModifierInvocation",
+                "src": "1822:28:1"
+              },
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "assignments": [
+                        164
+                      ]
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "constant": false,
+                          "name": "scoreObject",
+                          "scope": 200,
+                          "stateVariable": false,
+                          "storageLocation": "storage",
+                          "type": "struct Scorecard.Score",
+                          "value": null,
+                          "visibility": "internal"
+                        },
+                        "children": [
+                          {
+                            "attributes": {
+                              "contractScope": null,
+                              "name": "Score",
+                              "referencedDeclaration": 77,
+                              "type": "struct Scorecard.Score"
+                            },
+                            "id": 163,
+                            "name": "UserDefinedTypeName",
+                            "src": "1862:5:1"
+                          }
+                        ],
+                        "id": 164,
+                        "name": "VariableDeclaration",
+                        "src": "1862:25:1"
+                      },
+                      {
+                        "attributes": {
+                          "argumentTypes": null,
+                          "isConstant": false,
+                          "isLValue": true,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "type": "struct Scorecard.Score storage ref"
+                        },
+                        "children": [
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "overloadedDeclarations": [
+                                null
+                              ],
+                              "referencedDeclaration": 85,
+                              "type": "mapping(uint256 => struct Scorecard.Score storage ref)",
+                              "value": "scores"
+                            },
+                            "id": 165,
+                            "name": "Identifier",
+                            "src": "1890:6:1"
+                          },
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "overloadedDeclarations": [
+                                null
+                              ],
+                              "referencedDeclaration": 150,
+                              "type": "uint256",
+                              "value": "_studentId"
+                            },
+                            "id": 166,
+                            "name": "Identifier",
+                            "src": "1897:10:1"
+                          }
+                        ],
+                        "id": 167,
+                        "name": "IndexAccess",
+                        "src": "1890:18:1"
+                      }
+                    ],
+                    "id": 168,
+                    "name": "VariableDeclarationStatement",
+                    "src": "1862:46:1"
+                  },
+                  {
+                    "children": [
+                      {
+                        "attributes": {
+                          "argumentTypes": null,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "operator": "=",
+                          "type": "uint256"
+                        },
+                        "children": [
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "isConstant": false,
+                              "isLValue": true,
+                              "isPure": false,
+                              "lValueRequested": true,
+                              "member_name": "englishMarks",
+                              "referencedDeclaration": 72,
+                              "type": "uint256"
+                            },
+                            "children": [
+                              {
+                                "attributes": {
+                                  "argumentTypes": null,
+                                  "overloadedDeclarations": [
+                                    null
+                                  ],
+                                  "referencedDeclaration": 164,
+                                  "type": "struct Scorecard.Score storage pointer",
+                                  "value": "scoreObject"
+                                },
+                                "id": 169,
+                                "name": "Identifier",
+                                "src": "1919:11:1"
+                              }
+                            ],
+                            "id": 171,
+                            "name": "MemberAccess",
+                            "src": "1919:24:1"
+                          },
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "overloadedDeclarations": [
+                                null
+                              ],
+                              "referencedDeclaration": 152,
+                              "type": "uint256",
+                              "value": "_englishMarks"
+                            },
+                            "id": 172,
+                            "name": "Identifier",
+                            "src": "1946:13:1"
+                          }
+                        ],
+                        "id": 173,
+                        "name": "Assignment",
+                        "src": "1919:40:1"
+                      }
+                    ],
+                    "id": 174,
+                    "name": "ExpressionStatement",
+                    "src": "1919:40:1"
+                  },
+                  {
+                    "children": [
+                      {
+                        "attributes": {
+                          "argumentTypes": null,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "operator": "=",
+                          "type": "uint256"
+                        },
+                        "children": [
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "isConstant": false,
+                              "isLValue": true,
+                              "isPure": false,
+                              "lValueRequested": true,
+                              "member_name": "mathMarks",
+                              "referencedDeclaration": 74,
+                              "type": "uint256"
+                            },
+                            "children": [
+                              {
+                                "attributes": {
+                                  "argumentTypes": null,
+                                  "overloadedDeclarations": [
+                                    null
+                                  ],
+                                  "referencedDeclaration": 164,
+                                  "type": "struct Scorecard.Score storage pointer",
+                                  "value": "scoreObject"
+                                },
+                                "id": 175,
+                                "name": "Identifier",
+                                "src": "1969:11:1"
+                              }
+                            ],
+                            "id": 177,
+                            "name": "MemberAccess",
+                            "src": "1969:21:1"
+                          },
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "overloadedDeclarations": [
+                                null
+                              ],
+                              "referencedDeclaration": 154,
+                              "type": "uint256",
+                              "value": "_mathMarks"
+                            },
+                            "id": 178,
+                            "name": "Identifier",
+                            "src": "1993:10:1"
+                          }
+                        ],
+                        "id": 179,
+                        "name": "Assignment",
+                        "src": "1969:34:1"
+                      }
+                    ],
+                    "id": 180,
+                    "name": "ExpressionStatement",
+                    "src": "1969:34:1"
+                  },
+                  {
+                    "children": [
+                      {
+                        "attributes": {
+                          "argumentTypes": null,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "operator": "=",
+                          "type": "uint256"
+                        },
+                        "children": [
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "isConstant": false,
+                              "isLValue": true,
+                              "isPure": false,
+                              "lValueRequested": true,
+                              "member_name": "scienceMarks",
+                              "referencedDeclaration": 76,
+                              "type": "uint256"
+                            },
+                            "children": [
+                              {
+                                "attributes": {
+                                  "argumentTypes": null,
+                                  "overloadedDeclarations": [
+                                    null
+                                  ],
+                                  "referencedDeclaration": 164,
+                                  "type": "struct Scorecard.Score storage pointer",
+                                  "value": "scoreObject"
+                                },
+                                "id": 181,
+                                "name": "Identifier",
+                                "src": "2013:11:1"
+                              }
+                            ],
+                            "id": 183,
+                            "name": "MemberAccess",
+                            "src": "2013:24:1"
+                          },
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "overloadedDeclarations": [
+                                null
+                              ],
+                              "referencedDeclaration": 156,
+                              "type": "uint256",
+                              "value": "_scienceMarks"
+                            },
+                            "id": 184,
+                            "name": "Identifier",
+                            "src": "2040:13:1"
+                          }
+                        ],
+                        "id": 185,
+                        "name": "Assignment",
+                        "src": "2013:40:1"
+                      }
+                    ],
+                    "id": 186,
+                    "name": "ExpressionStatement",
+                    "src": "2013:40:1"
+                  },
+                  {
+                    "children": [
+                      {
+                        "attributes": {
+                          "argumentTypes": null,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "operator": "=",
+                          "type": "uint256"
+                        },
+                        "children": [
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "isConstant": false,
+                              "isLValue": true,
+                              "isPure": false,
+                              "lValueRequested": true,
+                              "member_name": "studentId",
+                              "referencedDeclaration": 70,
+                              "type": "uint256"
+                            },
+                            "children": [
+                              {
+                                "attributes": {
+                                  "argumentTypes": null,
+                                  "overloadedDeclarations": [
+                                    null
+                                  ],
+                                  "referencedDeclaration": 164,
+                                  "type": "struct Scorecard.Score storage pointer",
+                                  "value": "scoreObject"
+                                },
+                                "id": 187,
+                                "name": "Identifier",
+                                "src": "2063:11:1"
+                              }
+                            ],
+                            "id": 189,
+                            "name": "MemberAccess",
+                            "src": "2063:21:1"
+                          },
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "overloadedDeclarations": [
+                                null
+                              ],
+                              "referencedDeclaration": 150,
+                              "type": "uint256",
+                              "value": "_studentId"
+                            },
+                            "id": 190,
+                            "name": "Identifier",
+                            "src": "2087:10:1"
+                          }
+                        ],
+                        "id": 191,
+                        "name": "Assignment",
+                        "src": "2063:34:1"
+                      }
+                    ],
+                    "id": 192,
+                    "name": "ExpressionStatement",
+                    "src": "2063:34:1"
+                  },
+                  {
+                    "children": [
+                      {
+                        "attributes": {
+                          "argumentTypes": null,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "isStructConstructorCall": false,
+                          "lValueRequested": false,
+                          "names": [
+                            null
+                          ],
+                          "type": "tuple()",
+                          "type_conversion": false
+                        },
+                        "children": [
+                          {
+                            "attributes": {
+                              "argumentTypes": [
+                                {
+                                  "typeIdentifier": "t_uint256",
+                                  "typeString": "uint256"
+                                },
+                                {
+                                  "typeIdentifier": "t_uint256",
+                                  "typeString": "uint256"
+                                },
+                                {
+                                  "typeIdentifier": "t_uint256",
+                                  "typeString": "uint256"
+                                },
+                                {
+                                  "typeIdentifier": "t_uint256",
+                                  "typeString": "uint256"
+                                }
+                              ],
+                              "overloadedDeclarations": [
+                                null
+                              ],
+                              "referencedDeclaration": 103,
+                              "type": "function (uint256,uint256,uint256,uint256)",
+                              "value": "studentScoresRecorded"
+                            },
+                            "id": 193,
+                            "name": "Identifier",
+                            "src": "2121:21:1"
+                          },
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "overloadedDeclarations": [
+                                null
+                              ],
+                              "referencedDeclaration": 150,
+                              "type": "uint256",
+                              "value": "_studentId"
+                            },
+                            "id": 194,
+                            "name": "Identifier",
+                            "src": "2143:10:1"
+                          },
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "overloadedDeclarations": [
+                                null
+                              ],
+                              "referencedDeclaration": 152,
+                              "type": "uint256",
+                              "value": "_englishMarks"
+                            },
+                            "id": 195,
+                            "name": "Identifier",
+                            "src": "2155:13:1"
+                          },
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "overloadedDeclarations": [
+                                null
+                              ],
+                              "referencedDeclaration": 154,
+                              "type": "uint256",
+                              "value": "_mathMarks"
+                            },
+                            "id": 196,
+                            "name": "Identifier",
+                            "src": "2170:10:1"
+                          },
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "overloadedDeclarations": [
+                                null
+                              ],
+                              "referencedDeclaration": 156,
+                              "type": "uint256",
+                              "value": "_scienceMarks"
+                            },
+                            "id": 197,
+                            "name": "Identifier",
+                            "src": "2182:13:1"
+                          }
+                        ],
+                        "id": 198,
+                        "name": "FunctionCall",
+                        "src": "2121:75:1"
+                      }
+                    ],
+                    "id": 199,
+                    "name": "EmitStatement",
+                    "src": "2116:80:1"
+                  }
+                ],
+                "id": 200,
+                "name": "Block",
+                "src": "1851:352:1"
+              }
+            ],
+            "id": 201,
+            "name": "FunctionDefinition",
+            "src": "1606:597:1"
+          }
+        ],
+        "id": 202,
+        "name": "ContractDefinition",
+        "src": "70:2135:1"
+      }
+    ],
+    "id": 203,
+    "name": "SourceUnit",
+    "src": "37:2168:1"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.5.16+commit.9c3226ce.Emscripten.clang"
+  },
+  "networks": {
+    "5777": {
+      "events": {},
+      "links": {},
+      "address": "0x09C566B93470eB8908e8cBDB41d77efa207EA791",
+      "transactionHash": "0x9b14edea294a2a52c29e6ef57e561826255d502352a54ebe867f44b9db7e8a25"
+    }
+  },
+  "schemaVersion": "3.4.7",
+  "updatedAt": "2022-06-05T22:57:55.014Z",
+  "networkType": "ethereum",
+  "devdoc": {
+    "methods": {}
+  },
+  "userdoc": {
+    "methods": {}
+  }
+}
